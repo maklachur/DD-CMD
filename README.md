@@ -1,6 +1,13 @@
-# DD-CMD
 
-This is the official implementation of **DD-CMD**.
+
+# DD-CMD | [Paper link](https://arxiv.org/abs/2608.11335) | MICCAI2026
+
+**Dual-Domain Cross-Modal Decoding for Clinical Text-Guided Medical Image Segmentation (DD-CMD)** has been accepted to MICCAI2026. This is the official implementation of DD-CMD.
+
+---
+<p align="center"> <img src="assets/main_pipeline_miccai26.png" alt="MICCAI 2026 Image" width="1280"> </p>
+
+---
 
 ## Environment Setup
 
@@ -56,7 +63,7 @@ vision_type: facebook/convnext-tiny-224
 bert_type: microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext
 ```
 
-Please make sure the dataset paths, checkpoint paths, and any runtime options in `config/train.yaml` are correctly set before launching training or evaluation.
+Please ensure the dataset paths, checkpoint paths, and any runtime options in `config/train.yaml` are correctly configured before launching training or evaluation.
 
 ## Training
 
@@ -92,8 +99,17 @@ python evaluate.py --config ./config/train.yaml --ckpt ./pretrained_models/QaTa-
 
 ## Acknowledgment
 
-We thank the authors of **LViT** and the dataset providers for making the related resources publicly available.
+We thank the authors of [**LViT**](https://github.com/HUANGLIZI/LViT) for making their code, dataset, and related resources publicly available.
 
 ## Citation
 
-If you use this repository in your research, please cite the corresponding paper for **DD-CMD** and also cite the relevant dataset and annotation sources when appropriate.
+If you find this repository helpful, please consider citing our paper. When appropriate, please also cite the relevant dataset and annotation sources.
+
+```bibtex
+@article{rahman2026ddcmd,
+  title={Dual-Domain Cross-Modal Decoding for Clinical Text-Guided Medical Image Segmentation},
+  author={Rahman, Md Maklachur and Hammond, Tracy},
+  journal={arXiv preprint arXiv:2608.11335},
+  year={2026}
+}
+```
